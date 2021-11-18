@@ -1,7 +1,11 @@
 Travel API Client
 =================
 
-Fork this repo to your own personal repository, and please make sure it's **public**. Please send us the link to your
+Fork or otherwise clone this repo into your own personal **private** GitHub repository, and please make sure to add read access for the following GitHub users:
+- Pim-Huisman
+- bv1p
+
+Please reply to the assessment invitation that you got from us with the link to your
 repository when you are done with the assignment below. The mock backend to communicate with can be
 found [here on GitHub](https://github.com/Pim-Huisman/simple-travel-api-mock).
 
