@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KLM Case X01</title>
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+            <h1>KLM Case X01</h1>
+            <p>Find the details of the assignment below. Have fun!</p>
+        </div>
+    </div>
+    <div class="row">
+        <h2>Time limit</h2>
+        <p>
+            The time limit for <strong>regular</strong> developers is 3 hours.<br>
+            The time limit for <strong>fullstack</strong> developers is 4 hours because of an extra assignment
+            (see below).
+            Please do not take into account the time you need for the setup (see below).
+        </p><h2>Setup</h2>
+        <p>
+            Start with cloning the repository containing the service mock project found <a
+                href="https://bitbucket.org/afklmdevnet/simple-travel-api-mock" target="_blank">here</a>.
+            All the details required to start the service mock project and how to use it can be found in the included readme.
+            The service mock project should NOT be altered and should only be used from your project.
+            You can use the current project as starting point/template for your project.
+        </p>
+        <p>
+            The service mock project provides a couple of resources needed to complete the tasks, try them first
+            in a client (i.e. <a href="https://www.getpostman.com/" target="_blank">postman</a>) 
+            to get familiar with them.
+            Please do note that the resources are protected and require application level
+            authentication (client-id:travel-api-client, secret:psw),
+            grant-type is client_credentials.
+        </p>
+        <h2>Assignment</h2>
+        <h3>Create a user interface</h3>
+        <p>
+            Create a web user interface where a customer of the site could do the following:
+        <ul>
+            <li>Be able to select an origin.</li>
+            <li>Be able to select a destination.</li>
+            <li>Retrieve a fare offer for the given origin-destination combination.</li>
+        </ul>
+        <p>
+            Selections for origin and/or destination should be searchable, in other words the
+            customer should be able to find an origin or destination by providing a few characters that would
+            match either an airport code, name or description. The user interface may be in any technique
+            that you feel comfortable with.
+        </p>
+        <h3>Create a backend supporting the user interface</h3>
+        <p>
+            The user interface requires a dedicated backend that supports it, build this in the
+            provided template using spring-boot.
+        </p>
+        <ul>
+            <li>Consume the mocked services from the service mock project.</li>
+            <li>The authentication is on application level, so make sure the user interface is not
+                bothered with authentication.
+            </li>
+            <li>The mock is a bit inefficient, the fare result only returns origin/destination codes
+                without any additional details. When handling this request for your user interface
+                retrieve details for origin, destination and the actual fare and return a single
+                result to your user interface. Doing this sequentially would not be very efficient 
+                so perform these service calls in parallel.
+            </li>
+        </ul>
+        <h3>Add statistics for your backend</h3>
+        <p>
+            To get some input on our application usage we need to collect and store some information
+            from its traffic. Retrieve and store the require values below.
+        </p>
+        <ul>
+            <li>Total number of requests processed</li>
+            <li>Total number of requests resulted in an OK response</li>
+            <li>Total number of requests resulted in a 4xx response</li>
+            <li>Total number of requests resulted in a 5xx response</li>
+            <li>Average response time of all requests</li>
+            <li>Min response time of all requests</li>
+            <li>Max response time of all requests</li>
+        </ul>
+        <p>
+            To not only store this data expose this information in a new restful endpoint as JSON
+            and create a new dashboard to visualize this info.
+        </p>
+        <strong>Collecting metrics should not impact the user experience in any way.</strong>
+        <h3>Make the application configurable</h3>
+        <p>
+            No hard coded values for things like endpoints, etc. Everything should be configurable in
+            some kind of configuration file.
+        </p>
+        <h2>Extra assignment fullstack developer</h2>
+        <h3>Modular frontend</h3>
+        <p>
+            Create a separate build for your frontend (using npm and webpack) and build your
+            frontend in angular (which version is up to your own preference)
+            and make sure that somehow your resulting artifact is <strong>included and
+            exposed</strong> in your boot project.
+        </p>
+        <h2>Bonus points!</h2>
+        <p>Bonus points can be earned by implementing any or all of the additional tasks below:</p>
+        <ul>
+            <li>Create a new page where you can see a list of all airports (and be able to search on
+                them) and paginate the results.
+            </li>
+            <li>The mock service does not provide any form or sorting, find a way to add sorting
+                without having to change the original mock
+            </li>
+            <li>Provide a thread name that looks like 'async-task-{thread_id}' for all threads that perform async tasks.</li>
+            <li>Provide a unique ID to each request for tracking purposes and have <strong>every</strong> log line include it before the message.</li>
+            <li>Show us your knowledge of java up to and including the latest released version!</li>
+        </ul>
+        <h2>Summary</h2>
+        <p>
+            By no means is the goal to get a solution covering all special cases in a 100% robust
+            way. Requiring this would be naive given the time limit! It's important that you can explain
+            why you chose your solution instead of another.
+        </p>
+        <p>    
+            At least the functionality that you deliver should be error free. What you implement and how
+            you do it is subject to your creativity and ambition :-). Good luck!
+        </p>
+    </div>
+</div>
+</body>
+
+</html>

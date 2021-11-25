@@ -17,6 +17,7 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'war'
 
 sourceCompatibility = 11
 targetCompatibility = 11
@@ -27,6 +28,10 @@ build {
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
+    compileOnly ('org.springframework.boot:spring-boot-starter-actuator')
+    implementation ('javax.servlet:jstl:1.2')
+    implementation ('org.apache.tomcat.embed:tomcat-embed-jasper')
+    implementation("org.webjars:jquery:3.3.1")
     compileOnly('org.projectlombok:lombok')
     annotationProcessor('org.projectlombok:lombok')
     testCompileOnly('org.projectlombok:lombok')
