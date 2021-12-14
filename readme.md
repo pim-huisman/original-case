@@ -4,6 +4,7 @@ Travel API Client
 Fork or otherwise clone this repo into your own personal **private** GitHub repository, and please make sure to add read access for the following GitHub users:
 - Pim-Huisman
 - bv1p
+- ccakkan
 
 Please reply to the assessment invitation that you got from us with the link to your
 repository when you are done with the assignment below. The mock backend to communicate with can be
