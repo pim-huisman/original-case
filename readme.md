@@ -23,4 +23,4 @@ to list all tasks:
 
 To view the actual assignment (after starting the application) go to:
 
-[http://localhost:9000/index.html](http://localhost:9000/index.html)
+[http://localhost:9000/travel/index.html](http://localhost:9000/travel/index.html)
