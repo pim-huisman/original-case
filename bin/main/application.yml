@@ -1,0 +1,20 @@
+travel:
+  username: user
+  password: secret123
+  fareUrlPath: http://localhost:8080/fares
+  locationUrlPath: http://localhost:8080/airports
+  metricUrlPath: http://localhost:8080/actuator/metrics
+  
+management:
+  endpoints:
+     web:
+       base-path: /actuator 
+       exposure:
+          include: "*"
+  endpoint:
+     health:
+       show-details: always
+            
+          
+          
+  
